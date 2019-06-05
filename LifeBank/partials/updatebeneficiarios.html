@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<style>
+    .tam {
+        font-size: 60px;
+        color: #802831;
+    }
+    
+    .datos,
+    .estado {
+        width: 150px;
+        height: 30px;
+        border: 1px solid #FFFFFF;
+        border-radius: 0px;
+    }
+</style>
+<div align="center">
+    <h1>Actualización de Beneficiarios</h1>
+</div>
+
+<div align="center">
+    <span class="fa fa-edit tam"></span>
+</div>
+<p>&nbsp;</p>
+
+<div class="row">
+
+    <div class="col-md-1 col-xs-1"></div>
+
+    <div class="col-md-9 col-xs-9">
+
+
+
+
+
+
+        <div class="">
+
+
+
+            <table cellspacing="0" cellpadding="0" class="table table-striped table-hover">
+                <tr>
+                    <th scope="col">Nombre Completo</th>
+                    <th scope="col">Anterior Correo</th>
+                    <th scope="col">Nuevo Correo Electronico</th>
+                    <th scope="col">Confirmar Correo Electronico</th>
+                    <th scope="col">Acci&oacute;n</th>
+
+                </tr>
+                <tr>
+                    <td><input type="text" value="Gerson Rodriguez" class="form-control datos" disabled id="nombres"></td>
+                    <td><input type="text" value="gerson@gmail.com" class="form-control datos" disabled id="mailanterior"></td>
+                    <td><input type="text" value="" class="form-control datos" disabled id="nuevocorreo" placeholder="Nuevo correo"></td>
+                    <td><input type="text" value="" class="form-control datos" disabled id="confirmarcorreo" placeholder="Confirmar correo"></td>
+
+                    <td>
+                        <a href="#" onclick="habilitar()">Actualizar</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="text" value="Antonio Barrios" class="form-control datos" disabled id="nombres"></td>
+                    <td><input type="text" value="antonio@gmail.com" class="form-control datos" disabled id="mailanterior"></td>
+                    <td><input type="text" value="" class="form-control datos" disabled id="nuevocorreo" placeholder="Nuevo correo"></td>
+                    <td><input type="text" value="" class="form-control datos" disabled id="confirmarcorreo" placeholder="Confirmar correo"></td>
+
+                    <td>
+                        <a href="#" onclick="habilitar()">Actualizar</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="text" value="Jose Rodriguez" class="form-control datos" disabled id="nombres"></td>
+                    <td><input type="text" value="joserod@gmail.com" class="form-control datos" disabled id="mailanterior"></td>
+                    <td><input type="text" value="" class="form-control datos" disabled id="nuevocorreo" placeholder="Nuevo correo"></td>
+                    <td><input type="text" value="" class="form-control datos" disabled id="confirmarcorreo" placeholder="Confirmar correo"></td>
+
+                    <td>
+                        <a href="#" onclick="habilitar()">Actualizar</a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <!--BOTONES PARA ACCIONAR SOBRE LOS DATOS-->
+
+        <form action="" method="" class="form-horizontal" role="form">
+            <div class="btn-group" role="group" aria-label="...">
+                <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-primary btn-ls" onclick="deshabilitar()">Guardar</button>
+                </div>
+                <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-danger btn-ls" onclick="javascript:document.location.href='index.html'">Cancelar</button>
+                </div>
+
+            </div>
+        </form>
+
+        <!--FIN DE BOTONES PARA ACCIONAR SOBRE LOS DATOS-->
+
+
+
+    </div>
+
+
+
+    <div class="col-md-2 col-xs-2"></div>
+</div>
+<script>
+    function habilitar() {
+        document.getElementById('nuevocorreo').disabled = false;
+        document.getElementById('confirmarcorreo').disabled = false;
+    }
+
+    function deshabilitar() {
+        document.getElementById('nuevocorreo').disabled = true;
+        document.getElementById('confirmarcorreo').disabled = true;
+    }
+</script>

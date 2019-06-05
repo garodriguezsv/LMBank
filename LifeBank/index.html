@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="myapp">
+
+<head>
+
+    <title>LifeBank</title>
+
+    <script src="js/jquery-1.11.3.min.js"></script>
+
+    <script src="js/scrollup.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/bootstrap-theme.css" />
+    <link rel="stylesheet" href="css/starter-template.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/scrollup.css" />
+    <link rel="stylesheet" href="css/animate.css" />
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+
+<body>
+    <div class="navbar-wrapper">
+
+        <nav class="navbar navbar-inverse navbar-default navbar-static-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        </button>
+                    <a class="navbar-brand" href="#/home"><span class="fa fa-bank" style="font-size:20px"></span>&nbsp;LifeBank</a>
+                </div>
+
+                <div id="navbar" class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+
+                        <!-- SOBRE LAS CONSULTAS DE PRODUCTOS -->
+                        <li role="presentation" class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:;" role="button" aria-haspopup="true" aria-expanded="false">
+                                <span class="fa fa-book"></span>&nbsp;Consultas<span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#/consultaprodbac"><span class="fa fa-briefcase"></span>&nbsp;&nbsp;Productos Bancarios en tu cuenta</a></li>
+                                <li><a href="#/consultatransacciones"><span class="fa fa-exchange"></span>&nbsp;&nbsp;Transacciones en Productos Bancarios</a></li>
+
+
+                            </ul>
+                        </li>
+                        <!--FIN DE LAS CONSULTAS DE PRODUCTOS-->
+
+                        <!--TRANSFERENCIAS-->
+                        <li role="presentation" class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:;" role="button" aria-haspopup="true" aria-expanded="false">
+                                <span class="fa fa-exchange"></span>&nbsp;Transferencias<span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#/migrarsaldos"><span class="fa fa-user"></span>&nbsp;&nbsp;Transferencia a cuentas propias</a></li>
+                                <li><a href="#/transferterceros"><span class="fa fa-group"></span>&nbsp;&nbsp;Transferencia a Terceros</a></li>
+                            </ul>
+                        </li>
+                        <!--FIN TRANSFERENCIAS-->
+
+                        <!--PAGOS DE PRODUCTOS BANCARIOS-->
+                        <li role="presentation" class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:;" role="button" aria-haspopup="true" aria-expanded="false">
+                                <span class="fa fa-dollar"></span>&nbsp;Pago de Productos<span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#/pagotarjetapropia"><span class="fa fa-credit-card"></span>&nbsp;&nbsp;Pago de tarjeta</a></li>
+                                <li><a href="#/pagoprestamo"><span class="fa fa-edit"></span>&nbsp;&nbsp;Pago de Pr&eacute;stamo Bancario</a></li>
+                                <li><a href="#/pagotarjetaterceros"><span class="fa fa-credit-card"></span>&nbsp;&nbsp;Pago de Tarjetas de Cr&eacute;dito a Terceros</a></li>
+                                <li><a href="#/pagoprestamoterceros"><span class="fa fa-key"></span>&nbsp;&nbsp;Pago de Pr&eacute;stamos Bancarios a Terceros</a></li>
+                            </ul>
+                        </li>
+                        <!--FIN PAGOS DE PRODUCTOS BANCARIOS-->
+
+                        <!--ADMINISTRACION DE BENEFICIARIOS-->
+                        <li role="presentation" class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:;" role="button" aria-haspopup="true" aria-expanded="false">
+                                <span class="fa fa-key"></span>&nbsp;Beneficiarios<span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#/beneficiarios"><span class="fa fa-plus"></span>&nbsp;&nbsp;Agregar Beneficiario</a></li>
+                                <li><a href="#/updatebeneficiarios"><span class="fa fa-edit"></span>&nbsp;&nbsp;Actualizar Beneficiario</a></li>
+                                <li><a href="#/deletebeneficiarios"><span class="fa fa-user-times"></span>&nbsp;&nbsp;Eliminar Beneficiarios</a></li>
+                            </ul>
+                        </li>
+                        <!--FIN DE ADMINISTRACION DE BENEFICIARIOS-->
+
+
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+
+
+
+    <div style="clear:both;margin-top: 25px;"></div>
+    <div class="container-fluid">
+
+        <div class="span12">
+
+            <!--VISTA PARA MOSTRAR DATOS-->
+            <div ng-hide="stateLoading" ui-view class="animated fadeIn"></div>
+            <!--FIN VISTA PARA MOSTRAR DATOS-->
+
+            <div class="spinner" ng-show="stateLoading" align="center"><span style="font-size:40px;">Procesando...</span><span class="fa fa-gear fa-5x fa-spin" style="color:#4d7556;"></span></div>
+
+        </div>
+
+
+
+    </div>
+    <!--Botón hacia arriba-->
+    <a href="#" class="scrollup fa fa-arrow-up circulo" style="text-decoration:none;"></a>
+    <!--Fin Botón hacia arriba-->
+
+
+
+
+    <!--Orden funcional-->
+    <script src="angular/angular.js"></script>
+    <script src="angular/angular-ui-router.min.js"></script>
+
+    <script src="scripts/router.js"></script>
+
+    <!--Fin Orden funcional-->
+
+
+</body>
+
+</html>

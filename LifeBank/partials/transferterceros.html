@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<!-- CUENTAS DE TERCEROS, ORIGEN -->
+<div id="page-content-wrapper" class="animated fadeIn" ng-app>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-6">
+
+                <h1>Transferencias a Terceros <span class="fa fa-group" style="color:#802831"></span></h1>
+                <br />
+                <h4>Cuenta Bancaria del Cliente</h4>
+                <div class="origen">
+                    <select class="form-control caja1" name="cuenta">
+                            <option>--Seleccionar cuenta---</option>
+                            <option>00001 - (Cuenta titular)</option>
+                    </select>
+                    <h4>Digite el monto a transferir (Ej. 1,000.00)</h4>
+                    <div class="form-group input-group">
+                        <span class="input-group-addon">$</span>
+                        <input type="text" class="form-control" ng-model="monto">
+                        <span class="input-group-addon">.00</span>
+                    </div>
+
+                    <p>&nbsp;</p>
+                    <input class="btn btn-primary" type="submit" value="Ejecutar transacción" onclick="alert('¡El monto será depositado!');document.location.href='index.html'">
+
+
+                </div>
+
+
+            </div>
+            <!-- FIN CUENTA DE TERCEROS, ORIGEN -->
+
+            <!-- CUENTA DESTINO -->
+            <div class="col-lg-6">
+                <h1>&nbsp;</h1>
+                <br />
+                <h4>Cuenta del Beneficiario</h4>
+
+                <div class="destino">
+                    <select class="form-control" ng-model="cuentadestino">
+                            <option>Cuenta A</option>
+                            <option>Cuenta B</option>
+                            <option>Cuenta C</option>
+                            <option>Cuenta D</option>
+                          </select>
+                </div>
+                <!-- FIN CUENTA DESTINO -->
+
+                <!--BOUCHER DE COMPROBACIÓN-->
+                <div class="panel-body">
+                    <div class="table-responsive">
+                        <p>&nbsp;</p>
+                        <h4>Detalles de la transacción <span class="fa fa-exchange"></span> </h4>
+                        <table class="table table-bordered table-hover table-striped">
+                            <thead>
+                                <tr>
+                                    <th># de Transacción</th>
+                                    <th>Cuenta destino</th>
+                                    <th>Monto (USD)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>###</td>
+                                    <td><strong>{{cuentadestino}}</strong></td>
+                                    <td><strong>{{monto}}</strong></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!--FIN BOUCHER DE COMPROBACIÓN-->
+            </div>
+
+        </div>
+
+
+
+    </div>
+</div>

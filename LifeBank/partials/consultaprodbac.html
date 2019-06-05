@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<style>
+    .tam {
+        font-size: 60px;
+        color: #802831;
+    }
+    
+    .datos,
+    .estado {
+        width: 150px;
+        height: 30px;
+        border: 1px solid #FFFFFF;
+        border-radius: 0px;
+    }
+</style>
+<div align="center">
+    <h1>Productos Bancarios en tu cuenta</h1>
+</div>
+
+<div align="center">
+    <span class="fa fa-bank tam"></span>
+</div>
+<p>&nbsp;</p>
+
+<div class="row">
+
+    <div class="col-md-2 col-xs-2"></div>
+
+    <div class="col-md-8 col-xs-8">
+        <!--BUSCAR PRODUCTOS BANCARIOS-->
+        <form action="" class="form-horizontal" role="form">
+            <div class="form-group">
+                <label for="ejemplo_email_3" class="col-lg-2 control-label">Productos</label>
+                <div class="col-lg-8">
+
+                    <select class="form-control">
+                      <option value="">-Buscar producto-</option>
+                      <option value="">Cuentas Bancarias</option>
+                      <option value="">Tarjetas de Credito</option>
+                      <option value="">Prestamos Personales</option>
+                    </select>
+
+                </div>
+            </div>
+
+            <div align="center">
+                <div class="btn-group" role="group" aria-label="...">
+                    <div class="btn-group" role="group">
+                        <button type="submit" class="btn btn-primary">Buscar Producto</button>
+                    </div>
+
+                </div>
+            </div>
+            <br />
+        </form>
+        <!--FIN DE BUSQUEDA DE PRODUCTOS BANCARIOS-->
+        <div>
+            <table width="400" cellspacing="0" cellpadding="0" class="table table-striped table-hover">
+                <tr>
+                    <th scope="col">ID de Producto</th>
+                    <th scope="col">Nombre de Producto</th>
+                    <th scope="col">Numero de Cuenta</th>
+                    <th scope="col">Fecha de Apertura</th>
+                </tr>
+                <tr>
+                    <td><input type="text" value="01" class="form-control datos" disabled id="id_prod"></td>
+                    <td><input type="text" value="Tarjeta de Crédito" class="form-control datos" disabled id="nombreprod"></td>
+                    <td><input type="text" value="584256" class="form-control datos" disabled id="num_cuenta"></td>
+                    <td><input type="text" value="05/10/2019" class="form-control datos" disabled id="fecha"></td>
+                </tr>
+                <tr>
+                    <td><input type="text" value="05" class="form-control datos" disabled id="id_prod"></td>
+                    <td><input type="text" value="Préstamo Personal" class="form-control datos" disabled id="nombreprod"></td>
+                    <td><input type="text" value="965874" class="form-control datos" disabled id="num_cuenta"></td>
+                    <td><input type="text" value="05/10/2019" class="form-control datos" disabled id="fecha"></td>
+                </tr>
+                <tr>
+                    <td><input type="text" value="10" class="form-control datos" disabled id="nomb_empresa"></td>
+                    <td><input type="text" value="Cuenta de Ahorro" class="form-control datos" disabled id="nombreprod"></td>
+                    <td><input type="text" value="0014782214" class="form-control datos" disabled id="num_cuenta"></td>
+                    <td><input type="text" value="05/10/2019" class="form-control datos" disabled id="fecha"></td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+
+
+
+    <div class="col-md-2 col-xs-2"></div>
+</div>
+<script>
+    function habilitar() {
+        document.getElementById('id_prod').disabled = false;
+        document.getElementById('nombreprod').disabled = false;
+        document.getElementById('num_cuenta').disabled = false;
+        document.getElementById('fecha').disabled = false;
+    }
+
+    function deshabilitar() {
+        document.getElementById('id_prod').disabled = true;
+        document.getElementById('nombreprod').disabled = true;
+        document.getElementById('num_cuenta').disabled = true;
+        document.getElementById('fecha').disabled = true;
+    }
+</script>
